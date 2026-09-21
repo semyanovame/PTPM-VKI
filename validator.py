@@ -6,7 +6,7 @@ def validate_login(login):
         return False, "Логин должен быть строкой"
     
     if "@" in login:
-        # это email — сюда позже добавим валидацию
+        # это email 
         local_part = r"[a-zA-Z0-9._-]+" 
         domain = r"[a-zA-Z0-9-]+" 
         zone = r"[a-zA-Z]+"    
