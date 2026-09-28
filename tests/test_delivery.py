@@ -5,7 +5,6 @@ class TestDelivery(unittest.TestCase):
     def test_express_delivery_is_more_expensive(self):
         cost_normal, date_normal = calculate_delivery_cost(weight=10.0, distance=1000, package_type="обычный", is_express=False)
         cost_express, date_express = calculate_delivery_cost(weight=10.0, distance=1000, package_type="обычный", is_express=True)
-
         self.assertGreater(cost_express, cost_normal)
         self.assertLess(date_express, date_normal)
     def test_invalid_weight_returns_error(self):
