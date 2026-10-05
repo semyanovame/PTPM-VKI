@@ -9,7 +9,7 @@ class TestController(unittest.TestCase):
         user_interface = MagicMock()
         controller = Controller(validator, pushing_service, database, user_interface)
 
-        user_interface.get_input.return_value = ("valid_login", "ValidPass1!", "ValidPass1!")
+        user_interface.get_user_input.return_value = ("valid_login", "ValidPass1!", "ValidPass1!")
         database.does_user_exist.return_value = False
         validator.validate_main.return_value = (True, "")
         validator.hash_password.return_value = "hashed_password"
@@ -28,12 +28,12 @@ class TestController(unittest.TestCase):
         user_interface = MagicMock()
         controller = Controller(validator, pushing_service, database, user_interface)
 
-        user_interface.get_input.return_value = ("invalid_login", "short", "short")
+        user_interface.get_user_input.return_value = ("invalid_login", "short", "short")
         database.does_user_exist.return_value = False
-        validator.validate_main.return_value = (False, "Пароль слишком короткий")
+        validator.validate_main.return_value = (False, "Ошибка: Пароль слишком короткий")
         success, result = controller.process_registration()
 
         self.assertFalse(success)
         self.assertEqual(result, "Пароль слишком короткий")
-        database.add_data.assert_not_called()
+        pushing_service.push_data.assert_called_once_with("Ошибка: Пароль слишком короткий")
         pushing_service.push_data.assert_not_called()

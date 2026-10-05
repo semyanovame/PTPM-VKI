@@ -31,7 +31,7 @@ class Database:
         # Logic to delete data from the database
         self.connection.execute("DELETE FROM users WHERE id = ?", (user_id,))
         self.connection.commit()
-    def does_user_exist(self, login, password, confirm_password):
+    def does_user_exist(self, login):
         cursor = self.connection.execute("SELECT * FROM users WHERE login = ?", (login,))
         return cursor.fetchone() is not None
     def close(self):
