@@ -1,0 +1,22 @@
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# Кэш Python (компилированные файлы)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Настройки VS Code
+.vscode/
+
+# Файлы операционной системы
+Thumbs.db
+Desktop.ini
+
+# Временные файлы Microsoft Office (возникают при открытии .docx)
+~$*.docx
+~$*.xlsx
