@@ -8,8 +8,6 @@ class AbstractUserInterface(abc.ABC):
     def display_message(self, message):
         pass
 class UserInterface(AbstractUserInterface):
-     
-
     def get_user_input(self):
         login = input("Введите логин: ")
         password = input("Введите пароль: ")

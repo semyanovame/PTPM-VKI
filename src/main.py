@@ -1,7 +1,7 @@
 from src.Validator import Validator
 from src.Database import Database
-from src.user_interface import UserInterface
-from src.pushing_service import PushingService
+from src.UserInterface import UserInterface
+from src.ExternalService import PushingService
 from src.Controller import Controller
 
 
