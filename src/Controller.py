@@ -12,6 +12,7 @@ class Controller:
             result = f"Пользователь {login} уже существует."
             self.pushing_service.push_data(result)
             self.user_interface.display_message(result)
+            return False, result
         else:
             is_valid, error_message = self.validator.validate_main(login, password, confirm_password)
             if not is_valid:

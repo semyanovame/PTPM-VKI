@@ -27,7 +27,7 @@ class Validator:
                 return False, "Логин должен быть не короче 5 символов"
             if not re.match(r"^[a-zA-Z0-9_]+$", login):
                 return False, "логин может содержать только латинские буквы, цифры и знак подчёркивания"
-            if login.lower() in BLACKLISTED_LOGINS:
+            if login.lower() in self.BLACKLISTED_LOGINS:
                 return False, "логин не может быть из черного списка"
         return True, ""
 
