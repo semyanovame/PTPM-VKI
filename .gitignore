@@ -1,0 +1,29 @@
+# Окружение и кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Виртуальные окружения
+.venv/
+venv/
+ENV/
+
+# Отчеты покрытия кода (Coverage)
+.coverage
+htmlcov/
+*.lcov
+.htmlcov/
+
+# Локальные базы данных
+*.db
+*.sqlite3
+
+# Настройки сред разработки (IDE)
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
