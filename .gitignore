@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+
+# База данных SQLite (важно!)
+*.db
+mydatabase.db
+*.sqlite
+*.sqlite3
+
+# Переменные окружения
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
