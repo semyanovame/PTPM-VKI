@@ -6,7 +6,7 @@ from src.database import DatabaseRepository
 
 class TestParser(unittest.TestCase):
     def setUp(self):
-        self.repository = DatabaseRepository(":memory:")  #
+        self.repository = DatabaseRepository(":memory:")  
         self.parser = Parser(self.repository)
 
         fixture_path = os.path.join(os.path.dirname(__file__), 'fixtures', 'sample.html')

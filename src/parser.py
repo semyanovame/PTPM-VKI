@@ -9,7 +9,7 @@ class Parser:
         self.headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
     def parse_page(self, url: str) -> list:
         response = requests.get(url, headers=self.headers)
-        response.raise_for_status()  # Raise an error for bad responses
+        response.raise_for_status() 
         soup = BeautifulSoup(response.text, 'html.parser')
         parser_results = []
         posts = soup.find_all('div', class_='post')  
